@@ -124,7 +124,7 @@ function fullName(arr) {
 // -------------
 
 function gradesAvg(arr) {
-    const map1 = arr.map(element => );
+    // write your code here
 }
 // -------------------------------------------------------------------------------------------------------
 

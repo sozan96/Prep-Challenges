@@ -23,9 +23,7 @@
 const objLat = (obj) => {
     let summary = (`my name is ${obj.firstName.charAt(0).toUpperCase() + obj.firstName.slice(1)} ${obj.lastName.charAt(0).toUpperCase() + obj.lastName.slice(1)} I am ${obj.age} YO, and I love ${obj.hobby}.`);
     return summary;
-    
-}
-
+};
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
@@ -95,13 +93,17 @@ const cvFormatter = (arr) => {
          {
             arr2.push({ fullName: `${arr.firstName}`, tech: `${arr.tech}` });
 
-        } else if (e.yearsOfExperience > 1) {
+        } 
+        else if (arr.yearsOfExperience > 1) {
             arr2.push({ fullName: `${arr.firstName} ${arr.lastName}`, tech: `${arr.tech}`});
-        } else 
-        continue;
-    } return arr2;
-}
+        } 
+        else 
+        continue ;
+       
+    }  return arr2 ;
 
+
+};
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
