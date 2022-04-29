@@ -23,6 +23,10 @@
 const objLat = (obj) => {
     let summary = (`my name is ${obj.firstName.charAt(0).toUpperCase() + obj.firstName.slice(1)} ${obj.lastName.charAt(0).toUpperCase() + obj.lastName.slice(1)} I am ${obj.age} YO, and I love ${obj.hobby}.`);
     return summary;
+
+    
+
+
 };
 // -------------------------------------------------------------------------------------------------------
 
@@ -86,24 +90,25 @@ const objLat = (obj) => {
 //  2- If one of the names is null don`t add it to the full name
 
 const cvFormatter = (arr) => {
-    let arr2 = [];
-    for (let i = 0; i < arr.length; i++) {
-       // const e = arr[i];
-        if (arr.lastName === null && arr.yearsOfExperience > 1)
-         {
-            arr2.push({ fullName: `${arr.firstName}`, tech: `${arr.tech}` });
 
-        } 
-        else if (arr.yearsOfExperience > 1) {
-            arr2.push({ fullName: `${arr.firstName} ${arr.lastName}`, tech: `${arr.tech}`});
-        } 
-        else 
-        continue ;
-       
-    }  return arr2 ;
+   
+        let arr2 = [];
+        for (let i = 0; i < arr.length; i++) {
+           const e = arr[i];
+            if (e.lastName === null && e.yearsOfExperience > 1)
+            {
+                arr2.push({ fullName: `${e.firstName}`, tech: `${e.tech}` });
+            }
+    
+             else if (e.yearsOfExperience > 1) 
+             { arr2.push({ fullName: `${e.firstName} ${e.lastName}`, tech: `${e.tech}`});
+             }
+           else 
+            continue;
+       } return arr2;
 
+    
 
-};
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
